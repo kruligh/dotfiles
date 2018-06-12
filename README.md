@@ -14,10 +14,5 @@ Run `./install.bash`. The installation script will prompt before replacing any e
 
 Run `fish/install.sh` to install fish shell.
 
-Run `fish/utils.install.fish` to install fish utils like fisherman and bass.
-
-
-## Gnome
-
-
+Run `fish/utils.install.fish` from fish to install fish utils like fisherman and bass.
 
