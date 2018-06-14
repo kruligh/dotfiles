@@ -5,7 +5,10 @@ set showbreak=+++	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
 set showmatch	" Highlight matching brace
 set visualbell	" Use visual bell (no beeping)
- 
+
+set exrc    " Source .vimrc file in working directory
+set secure  " Disable write to file or execute shell commands in vimrc
+
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
@@ -22,3 +25,23 @@ set ruler	" Show row and column ruler information
  
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 2
+let g:netrw_winsize = 25
+let g:netrw_altv = 1
+
+map <F2> :Vexplore<CR>
+map tc :tabclose<CR>
+map <C-l> :wincmd l<CR>
+map <C-h> :wincmd h<CR>
+let g:netrw_browse_split = 4
+
