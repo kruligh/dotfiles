@@ -10,7 +10,7 @@ fisher nvm
 
 fish
 
-nvm instlal 8.11
+nvm install 8.11
 nvm install 8.10
 
 curl -L https://get.oh-my.fish | fish

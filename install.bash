@@ -85,3 +85,4 @@ echo
 
 sudo apt install curl
 sudo apt install xclip
+
