@@ -5,7 +5,7 @@
 [user]
     name = Dominik Kroliczek
     email = dominik@kroliczek.com
-    signingkey = F5D7C33F 
+    signingkey = 548D6BD436103092 
 
 [gpg]
     program=gpg
