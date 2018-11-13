@@ -2,7 +2,7 @@
 
 Development environment configuration.
 
-Cloned and simplified.
+Forked and simplified.
 
 ## Installation
 
