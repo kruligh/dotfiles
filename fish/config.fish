@@ -15,3 +15,12 @@ alias xcp 'xclip -selection c'
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /home/kruligh/src/veri/ipfs-data/node_modules/tabtab/.completions/sls.fish ]; and . /home/kruligh/src/veri/ipfs-data/node_modules/tabtab/.completions/sls.fish
 
+source /home/kruligh/anaconda3/etc/fish/conf.d/conda.fish
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval (eval /home/kruligh/anaconda3/bin/conda "shell.fish" "hook")
+# <<< conda initialize <<<
+
+set PATH /home/kruligh/anaconda3/bin/ $PATH
