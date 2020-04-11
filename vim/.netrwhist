@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/kruligh/.aws'
+let g:netrw_dirhist_2='/home/kruligh/.npm'
+let g:netrw_dirhist_3='/home/kruligh/.aws'
+let g:netrw_dirhist_4='/home/kruligh/src/instabot/najbabot/.git'

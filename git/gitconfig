@@ -5,7 +5,7 @@
 [user]
     name = Dominik Kroliczek
     email = dominik@kroliczek.com
-    signingkey = 548D6BD436103092 
+	signingkey = 548D6BD436103092
 
 [gpg]
     program=gpg
@@ -21,6 +21,7 @@
 
 [push]
     default = upstream
+	followTags = true
 
 [pull]
     default = current
@@ -50,20 +51,80 @@
     lineNumber = true
 
 [alias]
-    f = "!git ls-files | grep -i"
-    lsu = ls-files --other --exclude-standard
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate
+    lst = log --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an] --decorate -10
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate --date=short
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cgreen\\ [%an]" --decorate --numstat
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
-    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    lgl = log --graph --abbrev-commit --decorate --format=format:'%C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''      %C(green)%s%C(reset) %C(dim green)- %an%C(reset)' --all
+    cp = cherry-pick
+    st = status -s
+    ci = commit
+    co = checkout
+    br = branch
+    diff = diff --word-diff
+    wdiff = diff --word-diff=plain
+    dc = diff --cached
 
-    gp = grep --break --heading --line-number
+    r = reset
+    r1 = reset HEAD^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
 
-    c = commit
-    ca = commit -a
-    cm = commit -m
+    ready = rebase -i @{u}
+
+    amend = commit --amend -aC HEAD
+    undo = reset --soft HEAD^
+    #clean = add . && git rh
+
+ #   standup = log --since '1 day ago' --oneline --author <YOUREMAIL> # hack it with your email and uncomment
+ #   jira = log --since '6am' --oneline --author <YOUREMAIL> # hack it with your email and uncomment
+
+# git-svn
+    spull = svn rebase
+    spush = svn dcommit
+
+# even faster aliases
+    aa = add --all
+    com = checkout master
     cam = commit -am
-    ai = add -i
+    ac = !git add -A && git commit
+    ri2 = rebase -i HEAD~2
+    ri3 = rebase -i HEAD~3
+    ri5 = rebase -i HEAD~5
+    ri9 = rebase -i HEAD~9
+    ri22 = rebase -i HEAD~22
+    ri = rebase -i
+    rc = rebase --continue
+    ra = rebase --abort
+    rs = rebase --skip
+    mt = mergetool
+    ref1 = reset --hard HEAD@{1}
+    ref2 = reset --hard HEAD@{2}
+    cb = checkout - # checkout on previous branch
+    cv = checkout - # faster to type than 'cb' above
+    acam = !git add -A && git commit -am
+    cod = checkout develop
+    red = rebase develop
+    rem = rebase master
+    syncd = !git checkout develop && git pull --rebase && git checkout - && git rebase develop
+    syncm = !git checkout master && git pull --rebase && git checkout - && git rebase master
+    riod = rebase -i origin/develop # rebase origin/develop
+    cppb = cherry-pick HEAD@{1} # Cherry-pick previous branch
+    pushf = push --force-with-lease
+    revh = revert HEAD
+    fp = fetch --prune
 
-    s = status -s
-    ss = status
+    # Some common commit messages
+    dead = commit -am 'Remove dead code'
+    readme = commit *.md -m'Just update readme'
 
+    # Add files based on extension
+    cs = add *.cs
+    js = add *.js
+    ts = add *.ts
+    sql = add *.sql
+    json = add *.json
+    java = add *.java
+    yml = add *.yml

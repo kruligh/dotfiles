@@ -24,3 +24,9 @@ eval (eval /home/kruligh/anaconda3/bin/conda "shell.fish" "hook")
 # <<< conda initialize <<<
 
 set PATH /home/kruligh/anaconda3/bin/ $PATH
+set PATH /home/linuxbrew/.linuxbrew/bin/ $PATH
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /home/kruligh/src/secuvy/backend/cognito/node_modules/tabtab/.completions/slss.fish ]; and . /home/kruligh/src/secuvy/backend/cognito/node_modules/tabtab/.completions/slss.fish
+
