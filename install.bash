@@ -93,3 +93,8 @@ fish
 ./fish/utils.install.fish
 
 
+# java sdk
+read -r -p "Install java sdk 8? y(es)|no: "
+if [[ ${REPLY,,} =~ ^y(es)?$ ]]; then
+	sudo apt install openjdk-8-jdk
+fi
