@@ -85,4 +85,11 @@ echo
 
 sudo apt install curl
 sudo apt install xclip
+sudo apt install vim
+
+# fish
+bash ./fish/install.sh
+fish
+./fish/utils.install.fish
+
 
