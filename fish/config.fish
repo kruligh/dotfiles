@@ -8,6 +8,8 @@ alias gs 'git status'
 alias gc 'git checkout'
 alias xcp 'xclip -selection c'
 
+
+# ------ Path
 set PATH /home/kruligh/development/flutter/bin $PATH
 set PATH /home/kruligh/development/bin $PATH
 
