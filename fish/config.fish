@@ -13,3 +13,9 @@ alias xcp 'xclip -selection c'
 set PATH /home/kruligh/development/flutter/bin $PATH
 set PATH /home/kruligh/development/bin $PATH
 
+function tt
+    set -l title $argv[1]
+    function fish_title --inherit-variable title
+        echo "$title"
+    end
+end
