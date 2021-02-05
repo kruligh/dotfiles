@@ -6,7 +6,12 @@ alias vf 'vim (fzf)'
 alias g 'git'
 alias gs 'git status'
 alias gc 'git checkout'
+alias grc 'git rebase --continue'
 alias xcp 'xclip -selection c'
+
+alias tf 'terraform'
+alias tfa 'terraform apply -auto-approve'
+alias tfp 'terraform plan'
 
 
 # ------ Path
