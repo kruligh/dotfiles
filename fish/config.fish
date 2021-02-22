@@ -13,6 +13,9 @@ alias tf 'terraform'
 alias tfa 'terraform apply -auto-approve'
 alias tfp 'terraform plan'
 
+alias tf12 'terraform12'
+alias tf12a 'terraform12 apply -auto-approve'
+alias tf12p 'terraform12 plan'
 
 # ------ Path
 set PATH /home/kruligh/development/flutter/bin $PATH
