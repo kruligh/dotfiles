@@ -1,0 +1,20 @@
+#!/usr/bin/env fish
+
+xdotool key ctrl+shift+t
+
+# master
+echo "dupa"
+cd envs/master
+tt master
+
+# dev
+xdotool key ctrl+shift+t
+cd ../dev
+tt dev
+
+# prod
+xdotool key crtl+shift+t
+cd ../prod
+# todo check if exists, if not, exit terminal
+
+

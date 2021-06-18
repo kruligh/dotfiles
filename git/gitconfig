@@ -108,7 +108,7 @@
     cod = checkout develop
     red = rebase develop
     rem = rebase master
-    syncd = !git checkout develop && git pull --rebase && git checkout - && git rebase develop
+    syncd = !git checkout dev && git pull --rebase && git checkout - && git rebase dev
     syncm = !git checkout master && git pull --rebase && git checkout - && git rebase master
     riod = rebase -i origin/develop # rebase origin/develop
     cppb = cherry-pick HEAD@{1} # Cherry-pick previous branch
