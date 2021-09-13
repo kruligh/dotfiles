@@ -21,6 +21,7 @@ alias tf12p 'terraform12 plan'
 set PATH /home/kruligh/development/flutter/bin $PATH
 set PATH /home/kruligh/development/bin $PATH
 set PATH /home/kruligh/dotfiles/fish/scripts $PATH
+set PATH /home/linuxbrew/.linuxbrew/bin $PATH
 
 # ------ terminal title
 function tt
@@ -34,3 +35,12 @@ end
  function get-fargate-ssh-ip
    aws ec2 describe-network-interfaces --network-interface-ids (aws ecs describe-tasks --cluster $argv[1] --tasks (aws ecs list-tasks --cluster $argv[1] --query "taskArns" --output text --service-name ssh-server) --query "tasks[].attachments[].details[?name==`networkInterfaceId`].value" --output text) --query   "NetworkInterfaces[].Association.PublicIp" --output text
  end
+
+function pr 
+  set github_url (git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%' | awk '/github/');
+  set branch_name (git symbolic-ref HEAD | cut -d"/" -f 3,4);
+  set pr_url "$github_url/compare/master...$branch_name"
+  echo "$pr_url"
+  open $pr_url;
+end
+

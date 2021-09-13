@@ -1,2 +1,3 @@
 PATH=$PATH:~/development/flutter/bin
 PATH=$PATH:~/development/bin
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
