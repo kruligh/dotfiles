@@ -44,3 +44,7 @@ function pr
   open $pr_url;
 end
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

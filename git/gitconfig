@@ -110,6 +110,7 @@
     rem = rebase master
     syncd = !git checkout dev && git pull --rebase && git checkout - && git rebase dev
     syncm = !git checkout master && git pull --rebase && git checkout - && git rebase master
+    syncmain = !git checkout main && git pull --rebase && git checkout - && git rebase main
     riod = rebase -i origin/develop # rebase origin/develop
     cppb = cherry-pick HEAD@{1} # Cherry-pick previous branch
     pushf = push --force-with-lease
