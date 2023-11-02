@@ -21,6 +21,7 @@ alias tf12p 'terraform12 plan'
 set PATH /home/kruligh/development/flutter/bin $PATH
 set PATH /home/kruligh/development/bin $PATH
 set PATH /home/kruligh/dotfiles/fish/scripts $PATH
+set PATH /home/kruligh/dotfiles/bin $PATH
 set PATH /home/linuxbrew/.linuxbrew/bin $PATH
 
 # ------ terminal title

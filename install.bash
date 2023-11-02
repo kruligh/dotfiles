@@ -13,6 +13,7 @@ BACKUP_DIR="$HOME/.dotfiles-backup"
 NEW=
 REPLACED=
 SKIPPED=
+export PATH="$PATH:$HOME/dotfiles/bin"
 
 link_prompt() {
     if [ -e $2 ]; then
@@ -98,3 +99,14 @@ read -r -p "Install java sdk 8? y(es)|no: "
 if [[ ${REPLY,,} =~ ^y(es)?$ ]]; then
 	sudo apt install openjdk-8-jdk
 fi
+
+# texpander
+mkdir ~/.texpander
+cp -r ./texpander/* ~/.texpander/
+sudo apt install xsel
+sudo apt install xdotool
+sudo apt install zenity
+
+touch ~/.xbindkeysrc
+echo -e "\"xdotool key texpander.sh\"\n  Control+Shift + e" >> ~/.xbindkeysrc
+
