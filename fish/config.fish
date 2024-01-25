@@ -17,12 +17,19 @@ alias tf12 'terraform12'
 alias tf12a 'terraform12 apply'
 alias tf12p 'terraform12 plan'
 
+alias k 'kubectl'
+alias gcp 'gcloud'
+
 # ------ Path
 set PATH /home/kruligh/development/flutter/bin $PATH
 set PATH /home/kruligh/development/bin $PATH
 set PATH /home/kruligh/dotfiles/fish/scripts $PATH
 set PATH /home/kruligh/dotfiles/bin $PATH
 set PATH /home/linuxbrew/.linuxbrew/bin $PATH
+
+# ------ Completions
+
+set fish_complete_path /home/kruligh/dotfiles/fish/completions $fish_complete_path
 
 # ------ terminal title
 function tt

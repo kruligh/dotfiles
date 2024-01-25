@@ -6,5 +6,5 @@ fisher install fishpkg/fish-prompt-metro
 fisher install edc/bass
 fisher install FabioAntunes/fish-nvm
 
-nvm install 12
+nvm install 20
 
