@@ -56,3 +56,9 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# ----------- python
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin $PATH
+status --is-interactive; and source (pyenv init --path | psub)
+status --is-interactive; and source (pyenv init - | psub)
